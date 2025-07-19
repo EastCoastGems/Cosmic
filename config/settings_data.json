@@ -97,14 +97,17 @@
     "popup_shadow_blur": 5,
     "drawer_border_thickness": 1,
     "drawer_border_opacity": 10,
-    "drawer_shadow_opacity": 0,
+    "drawer_shadow_opacity": 10,
     "drawer_shadow_horizontal_offset": 0,
     "drawer_shadow_vertical_offset": 4,
-    "drawer_shadow_blur": 5,
+    "drawer_shadow_blur": 15,
     "badge_position": "bottom left",
     "badge_corner_radius": 40,
-    "sale_badge_color_scheme": "scheme-5",
-    "sold_out_badge_color_scheme": "scheme-3",
+    "sale_badge_color_scheme": "scheme-94c0aaa0-b1d9-4b02-9b93-c1c598a8225d",
+    "sold_out_badge_color_scheme": "scheme-4",
+    "brand_headline": "Mystical Treasures for Every Soul",
+    "brand_description": "<p>Discover a curated collection of cosmic gems and enchanting jewelry, each piece radiating mystical energy and celestial beauty. Elevate your style and spirit with treasures inspired by the magic of the universe.</p>",
+    "brand_image": "shopify://shop_images/close-up-of-a-blue-crystal-floating.jpg",
     "social_facebook_link": "https://m.facebook.com/109868765008185/",
     "social_instagram_link": "http://instagram.com/east.coast.gems",
     "social_youtube_link": "",
@@ -122,6 +125,7 @@
     "show_vendor": false,
     "show_cart_note": false,
     "cart_drawer_collection": "",
+    "cart_color_scheme": "scheme-94c0aaa0-b1d9-4b02-9b93-c1c598a8225d",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -394,9 +398,9 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "body {background: linear-gradient(135deg, #2a0845 0%, #b23cf0 100%); color: #ffd700; font-family: 'Montserrat', sans-serif;}",
-      "a, button {border-radius: 20px; box-shadow: 0 4px 12px rgba(178,60,240,0.25); transition: background 0.2s, color 0.2s;}",
-      "a:hover, button:hover {background: #ffd700; color: #2a0845;}"
+      "body {background: linear-gradient(135deg, #2a0845 0%, #b23cf0 100%); color: #ffd700; font-family: \"Montserrat\", sans-serif;}",
+      "a,button {border-radius: 20px; box-shadow: 0 4px 12px rgba(178, 60, 240, 0.25); transition: background 0.2s, color 0.2s;}",
+      "a:hover,button:hover {background: #ffd700; color: #2a0845;}"
     ]
   }
 }
