@@ -28,6 +28,32 @@
 {%- endstyle -%}
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <!-- Cosmic Floating Stars -->
+  <div class="cosmic-floating-stars" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;">
+    <span class="star-emoji" style="position:absolute;left:10%;top:20%;font-size:2rem;animation:floatStar 4s infinite alternate;">✨</span>
+    <span class="star-emoji" style="position:absolute;left:80%;top:30%;font-size:2.5rem;animation:floatStar 5s infinite alternate-reverse;">🌟</span>
+    <span class="star-emoji" style="position:absolute;left:50%;top:10%;font-size:1.8rem;animation:floatStar 3.5s infinite alternate;">⭐</span>
+    <span class="star-emoji" style="position:absolute;left:25%;top:60%;font-size:2.2rem;animation:floatStar 4.5s infinite alternate-reverse;">✨</span>
+    <span class="star-emoji" style="position:absolute;left:70%;top:75%;font-size:2rem;animation:floatStar 3s infinite alternate;">🌟</span>
+  </div>
+  <!-- Cosmic Footer Message -->
+  <div class="cosmic-glow" style="width:100%;text-align:center;margin-top:2rem;font-size:1.2rem;color:#ffd700;animation:floatText 3s infinite alternate;">
+    ✨ Thank you for visiting East Coast Gems! ✨
+  </div>
+  <style>
+    .cosmic-glow {
+      text-shadow: 0 0 12px #ffd700, 0 0 24px #b23cf0;
+    }
+    @keyframes floatText {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-12px); }
+    }
+    @keyframes floatStar {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-18px); }
+    }
+  </style>
+
   {%- liquid
     assign has_social_icons = true
     if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
