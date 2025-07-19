@@ -1,11 +1,26 @@
-:root {
-  --alpha-button-background: 1;
-  --alpha-button-border: 1;
-  --alpha-link: 0.85;
-  --alpha-badge-border: 0.1;
-  --focused-base-outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
-  --focused-base-outline-offset: 0.3rem;
-  --focused-base-box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
+body.cosmic-bg {
+  background: linear-gradient(135deg, #2a0845 0%, #b23cf0 100%);
+  min-height: 100vh;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  color: #fff;
+}
+
+.button {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: box-shadow 0.2s;
+}
+
+.button--primary {
+  background: linear-gradient(90deg, #b23cf0 0%, #ffd700 100%);
+  color: #fff;
+}
+
+.button--primary:hover {
+  box-shadow: 0 0 12px #b23cf0;
 }
 
 .product-card-wrapper .card,
@@ -1990,6 +2005,7 @@ input[type='checkbox'] {
 
 .quantity__input[type='number'] {
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 
 .quantity__rules {
