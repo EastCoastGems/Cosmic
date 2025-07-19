@@ -391,5 +391,12 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      "body {background: linear-gradient(135deg, #2a0845 0%, #b23cf0 100%); color: #ffd700; font-family: 'Montserrat', sans-serif;}",
+      "a, button {border-radius: 20px; box-shadow: 0 4px 12px rgba(178,60,240,0.25); transition: background 0.2s, color 0.2s;}",
+      "a:hover, button:hover {background: #ffd700; color: #2a0845;}"
+    ]
   }
 }
