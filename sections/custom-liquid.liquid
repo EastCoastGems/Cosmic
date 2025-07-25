@@ -27,14 +27,9 @@
       </div>
     {% endif %}
     <!-- End Random Product Showcase -->
-    {% assign product = collections['all'].products | shuffle | first %}
   </div>
 </div>
 
-          <img src="{{ product.featured_media | image_url: width: 400 }}"
-               alt="{{ product.title }}"
-               width="400" height="400"
-               style="width:100%;border-radius:12px;margin-bottom:1rem;box-shadow:0 2px 8px rgba(178,60,240,0.3);">
 {
   "name": "t:sections.custom-liquid.name",
   "tag": "section",
