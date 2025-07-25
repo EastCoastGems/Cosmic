@@ -4,7 +4,7 @@
     <div class="card">
       <div class="card__media">
         {%- if card_product.featured_image -%}
-          <img src="{{ card_product.featured_image | image_url }}" alt="{{ card_product.title }}">
+          <img src="{{ card_product.featured_image | image_url }}" alt="{{ card_product.title }}" width="{{ card_product.featured_image.width }}" height="{{ card_product.featured_image.height }}">
         {%- else -%}
           <div class="placeholder">{{ 'onboarding.product_title' | t }}</div>
         {%- endif -%}
