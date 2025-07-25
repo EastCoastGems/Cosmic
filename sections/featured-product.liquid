@@ -1,9 +1,11 @@
-{%- liquid
   assign product = section.settings.product
   if product == null
     assign placeholder = true
   endif
--%}
+{% assign product = section.settings.product %}
+{% if product == null %}
+  {% assign placeholder = true %}
+{% endif %}
 
 <product-info
   data-section="{{ section.id }}"
