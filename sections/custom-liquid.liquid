@@ -11,8 +11,22 @@
     }
   }
 {%- endstyle -%}
+
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="section-{{ section.id }}-padding">
+    <!-- Random Product Showcase -->
+    {% assign product = collections['all'].products | sample %}
+    {% if product %}
+      <div class="cosmic-product-card" style="background:linear-gradient(135deg,#b23cf0 0%,#2a0845 100%);border:2px solid rgba(255,215,0,0.8);border-radius:20px;box-shadow:0 4px 12px rgba(178,60,240,0.5);color:#ffd700;padding:1.5rem;margin:2rem auto;max-width:400px;text-align:center;">
+        {% if product.featured_media %}
+          <img src="{{ product.featured_media | image_url: width: 400 }}" alt="{{ product.title }}" style="width:100%;border-radius:12px;margin-bottom:1rem;box-shadow:0 2px 8px rgba(178,60,240,0.3);">
+        {% endif %}
+        <h2 style="font-size:1.4rem;font-weight:700;margin:1rem 0 0.5rem 0;">{{ product.title }}</h2>
+        <p style="font-size:1.2rem;margin-bottom:1rem;">{{ product.price | money }}</p>
+        <a href="{{ product.url }}" style="display:inline-block;background:#b23cf0;color:#fff;border:2px solid #ffd700;border-radius:20px;padding:0.5rem 1.5rem;font-weight:600;box-shadow:0 4px 12px rgba(178,60,240,0.5);text-decoration:none;transition:.2s;">View Product</a>
+      </div>
+    {% endif %}
+    <!-- End Random Product Showcase -->
     {{ section.settings.custom_liquid }}
   </div>
 </div>
