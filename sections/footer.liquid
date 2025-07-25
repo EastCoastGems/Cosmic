@@ -1,68 +1,33 @@
 
 <!-- Shopify Footer Section - Recreated for Theme Check Compliance -->
-
-<section class="footer" style="background: linear-gradient(135deg, #2a0845 0%, #b23cf0 100%); color: #fff; padding: 2rem 0;">
-  <div class="footer__row" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 2rem;">
-    <div class="footer-block__newsletter" style="flex:1; min-width:220px;">
+<section class="footer">
+  <div class="footer__row">
+    <div class="footer-block__newsletter">
       {%- if section.settings.newsletter_enable -%}
         {%- if section.settings.newsletter_heading != blank -%}
           <h2>{{ section.settings.newsletter_heading }}</h2>
         {%- endif -%}
         {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
           <input type="hidden" name="contact[tags]" value="newsletter">
-          <input type="email" name="contact[email]" required placeholder="Your email">
+          <input type="email" name="contact[email]" required>
           <button type="submit">{{ 'newsletter.button_label' | t }}</button>
         {%- endform -%}
       {%- endif -%}
     </div>
-    <div class="footer-block__links" style="flex:1; min-width:180px;">
-      <h3>Quick Links</h3>
-      <ul style="list-style:none; padding:0; margin:0;">
-        <li><a href="/collections" style="color:#ffd700; text-decoration:none;">Shop Collections</a></li>
-        <li><a href="/pages/about-me" style="color:#ffd700; text-decoration:none;">About Me</a></li>
-        <li><a href="/pages/honoring-angela" style="color:#ffd700; text-decoration:none;">Honoring Angela</a></li>
-        <li><a href="/pages/crystal-glossary" style="color:#ffd700; text-decoration:none;">Glossary</a></li>
-        <li><a href="/pages/contact" style="color:#ffd700; text-decoration:none;">Contact</a></li>
-      </ul>
+    <div class="footer__localization">
+      {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
+        <localization-form>
+          {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
+          {%- endform -%}
+        </localization-form>
+      {%- endif -%}
+      {%- if section.settings.enable_language_selector and localization.available_languages.size > 1 -%}
+        <localization-form>
+          {%- form 'localization', id: 'FooterLanguageForm', class: 'localization-form' -%}
+          {%- endform -%}
+        </localization-form>
+      {%- endif -%}
     </div>
-    <div class="footer-block__socials" style="flex:1; min-width:180px;">
-      <h3>Follow Us</h3>
-      <ul class="list-social" style="display:flex;gap:1rem;list-style:none;padding:0;margin:0;">
-        <li><a href="https://instagram.com/eastcoastgemsbycara" class="list-social__link" target="_blank" rel="noopener"><img src="/assets/icon-instagram.svg" alt="Instagram" style="height:2.2rem;width:2.2rem;"></a></li>
-        <li><a href="https://facebook.com/eastcoastgemsbycara" class="list-social__link" target="_blank" rel="noopener"><img src="/assets/icon-facebook.svg" alt="Facebook" style="height:2.2rem;width:2.2rem;"></a></li>
-        <li><a href="mailto:info@eastcoastgemsbycara.com" class="list-social__link"><img src="/assets/icon-email.svg" alt="Email" style="height:2.2rem;width:2.2rem;"></a></li>
-      </ul>
-    </div>
-  </div>
-<!-- Removed redundant closing section tag -->
-  <div class="footer__extras" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:2rem;margin-top:2rem;">
-    <div class="footer__payments" style="display:flex;gap:0.75rem;align-items:center;">
-      <img src="/assets/icon-visa.svg" alt="Visa" style="height:2.2rem;">
-      <img src="/assets/icon-mastercard.svg" alt="Mastercard" style="height:2.2rem;">
-      <img src="/assets/icon-amex.svg" alt="Amex" style="height:2.2rem;">
-      <img src="/assets/icon-paypal.svg" alt="PayPal" style="height:2.2rem;">
-      <img src="/assets/icon-applepay.svg" alt="Apple Pay" style="height:2.2rem;">
-      <!-- Add more payment icons as needed -->
-    </div>
-    <div class="footer__badge" style="display:flex;align-items:center;">
-      <img src="/assets/crystal-chakra-badge.png" alt="Certified Crystal & Chakra Healer" style="height:3rem;border-radius:8px;box-shadow:0 2px 8px #b23cf0;">
-    </div>
-    <div class="footer__follow-shop">
-      <a href="https://shop.app/eastcoastgemsbycara" target="_blank" rel="noopener" style="background:linear-gradient(90deg,#b23cf0 0%,#ffd700 100%);color:#fff;font-weight:600;border-radius:30px;padding:0.75rem 2rem;text-decoration:none;box-shadow:0 2px 8px rgba(178,60,240,0.15);">Follow on Shop</a>
-    </div>
-    <div class="footer__currency">
-      <form method="post" action="/localization" id="FooterCurrencyForm" class="localization-form">
-        <select name="currency" style="padding:0.5rem 1rem;border-radius:8px;background:#2a0845;color:#ffd700;font-weight:600;">
-          {% for currency in localization.available_currencies %}
-            <option value="{{ currency.iso_code }}" {% if currency.iso_code == localization.currency.iso_code %}selected{% endif %}>{{ currency.name }} ({{ currency.iso_code }})</option>
-          {% endfor %}
-        </select>
-        <button type="submit" style="margin-left:0.5rem;padding:0.5rem 1rem;border-radius:8px;background:#ffd700;color:#2a0845;font-weight:600;">Change</button>
-      </form>
-    </div>
-  </div>
-  <div class="footer__bottom" style="text-align:center;margin-top:2rem;font-size:1.1rem;color:#ffd700;">
-    &copy; 2022 East Coast Gems by Cara. All rights reserved.
   </div>
 </section>
 
