@@ -15,7 +15,7 @@
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="section-{{ section.id }}-padding">
     <!-- Random Product Showcase -->
-    {% assign product = collections['all'].products | shuffle | first %}
+    {% assign product = collections['all'].products | sample: 1 | first %}
     {% if product %}
       <div class="cosmic-product-card" style="background:linear-gradient(135deg,#b23cf0 0%,#2a0845 100%);border:2px solid rgba(255,215,0,0.8);border-radius:20px;box-shadow:0 4px 12px rgba(178,60,240,0.5);color:#ffd700;padding:1.5rem;margin:2rem auto;max-width:400px;text-align:center;">
         {% if product.featured_media %}
