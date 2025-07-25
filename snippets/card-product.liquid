@@ -198,6 +198,7 @@
                 </span>
               </p>
             {%- endif -%}
+        {%- endfor -%}
 
             {% render 'price', product: card_product, price_class: '', show_compare_at_price: true %}
             {%- if card_product.quantity_price_breaks_configured? -%}
