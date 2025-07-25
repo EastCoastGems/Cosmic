@@ -211,7 +211,7 @@
             {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
               <localization-form>
                 {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
-                </form>
+                {%- endform -%}
     </div>
 </footer>
 
