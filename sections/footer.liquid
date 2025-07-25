@@ -204,12 +204,14 @@
                   </button>
                 </div>
               {%- endform -%}
+                </div>
             {%- endif -%}
           </div>
           <div class="footer__localization cosmic-glow" style="background:rgba(34,8,69,0.7);border-radius:18px;box-shadow:0 4px 24px #b23cf0a0;padding:1.5rem 2rem;min-width:180px;max-width:320px;">
             {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
               <localization-form>
                 {%- form 'localization', id: 'FooterCountryForm', class: 'localization-form' -%}
+                </form>
     </div>
 </footer>
 
